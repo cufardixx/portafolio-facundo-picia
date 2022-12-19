@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400&display=swap');
 
+:root{
+    --color-primary: rgb(255,122,0);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -22,7 +26,7 @@ body{
     justify-content:flex-end;
     align-items: center;
     height: 80px;
-    background-color: black;
+    background-color: #121212;
     color: white;
     z-index: 2;
 }
@@ -310,6 +314,7 @@ img{
     grid-template-columns: 3fr 2fr;
     gap:20px;
     align-items: center;
+    margin-bottom: 0;
 }
 
 .footer__title{
@@ -362,4 +367,150 @@ img{
     text-decoration: none;
     color: #fff;
     font-weight: 200;
+}
+
+@media screen and (max-width: 370px){
+    .waveContainer{
+        position:relative;
+        top: -250px;
+        left: 0px;
+        height: 300px;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+    .head{
+        z-index: 100;
+        width: 100%;
+        height: 50px;
+    }
+
+    .main-menu{
+        font-size: 15px;
+        justify-content:space-between;
+        width: 100%;
+    }
+    
+    .red-header{
+        display: none;
+    }
+
+    .container{
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    .texto{
+        margin-right: 0px;
+    }
+
+    .frase{
+        margin-top: 30px;
+        text-align: center;
+        font-size: 14px;
+    
+    }
+    
+    .img-inicio{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        z-index: 2;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+    
+    span{
+        font-size: 20px;
+        text-align:start;
+        font-weight: 400;
+        color: rgb(255, 123, 0);
+    }
+    
+    .title{
+       
+        font-size: 30px;
+        color: black;
+        font-weight: 400;
+        text-align: start;
+        margin-left: 0px;
+        margin: 0 auto;
+        z-index: 3;
+    }
+
+    .spam-title{
+        font-size: 30px;
+        color: black;
+        font-weight: 400;
+        text-align: start;
+        margin-left: -3px;
+        display: block;
+        white-space: nowrap;
+         border-right: 4px solid; 
+        width: 14ch;
+    
+        animation: typing 3.7s 14 steps(14), blink .5s infinite step-end alternate;
+        overflow: hidden;
+    }
+
+    .img-abilidades{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+     }
+     
+    
+    .seccion-about h1,p,div,h2{
+        margin-bottom: 30px;
+        text-align:center;
+    }
+    
+    .h2{
+        margin-top: 25px;
+    }
+    .borde{
+        border-bottom: 1px solid ;
+    }
+    
+    .img-abilidades{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       z-index: 1;
+    }
+    
+    .abilidad{
+        margin-right: 50px;
+        width: 90px;
+    }
+
+    .blanca{
+        top: -200px;
+        z-index: 1;
+    }
+    
+    .subtitle{
+        text-align: center;
+    }
+
+    .proyects{
+        height: 100vh;
+        overflow:scroll;
+    }
+
+    .project__grid{
+        width: 100%;
+        grid-template-areas: 
+        "img1"
+        "img2"
+        "img3"
+        "img4"
+        "img5";
+        height: auto;
+        grid-template-rows: repeat(5, 250px);
+        grid-auto-rows: 250px;
+        gap:10px;
+    }
 }
